@@ -113,6 +113,15 @@ const routes: VexRoutes = [
         ]
       },
       {
+        path: 'angular',
+        children: [
+          {
+            path: 'all',
+            loadChildren: () => import('./pages/angular/angular.module').then(m => m.AngularModule),
+          },
+        ]
+      },
+      {
         path: 'ui',
         children: [
           {

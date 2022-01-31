@@ -1,0 +1,23 @@
+<vex-page-layout mode="simple">
+    <vex-page-layout-header fxLayout="column" fxLayoutAlign="center start">
+        <div vexContainer>
+            <h1 class="title mt-0 mb-1">Components</h1>
+            <vex-breadcrumbs [crumbs]="['Components', 'All']"></vex-breadcrumbs>
+        </div>
+    </vex-page-layout-header>
+
+    <vex-page-layout-content fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="24px" vexContainer>
+        <div @stagger [fxFlex]="menuWidth" class="sticky top-6" fxHide fxLayout="column" fxShow.gt-sm>
+            <mat-list class="navigation" fxFlex="grow">
+                <h3 @fadeInRight matSubheader>Components</h3>
+                <mat-list-item (click)="scrollTo('clipboard')" @fadeInRight class="cursor-pointer" matRipple>
+                    <h4 matLine>Clipboard</h4>
+                </mat-list-item>
+            </mat-list>
+        </div>
+
+        <div @stagger class="w-full" fxLayout="column" fxLayoutGap="24px">
+            <vex-copy-to-clipboard @fadeInUp></vex-copy-to-clipboard>
+        </div>
+    </vex-page-layout-content>
+</vex-page-layout>
