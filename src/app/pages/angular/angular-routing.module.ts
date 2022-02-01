@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatButtonModule } from '@angular/material/button';
 import { MatRippleModule } from '@angular/material/core';
@@ -21,6 +21,7 @@ import { VexRoutes } from 'src/@vex/interfaces/vex-route.interface';
 import { ComponentsOverviewAutocompleteModule } from '../ui/components/components-overview/components/components-overview-autocomplete/components-overview-autocomplete.module';
 import { AngularAllComponentsComponent } from './angular-all-components/angular-all-components.component';
 import { CopyToClipboardComponent } from './angular-all-components/components/copy-to-clipboard/copy-to-clipboard.component';
+import { TempleteDrivenValidationComponent } from './angular-all-components/components/templete-driven-validation/templete-driven-validation.component';
 
 
 const routes: VexRoutes = [
@@ -33,7 +34,9 @@ const routes: VexRoutes = [
 @NgModule({
   imports: [RouterModule.forChild(routes),
     CommonModule,
+    FormsModule,
     ComponentsOverviewAutocompleteModule,
+    MatFormFieldModule,
     MatInputModule,
     MatAutocompleteModule,
     MatIconModule,
@@ -50,7 +53,7 @@ const routes: VexRoutes = [
     BreadcrumbsModule,
     ContainerModule],
   exports: [RouterModule],
-  declarations:[CopyToClipboardComponent,AngularAllComponentsComponent]
+  declarations:[CopyToClipboardComponent,AngularAllComponentsComponent,TempleteDrivenValidationComponent]
 })
 export class AngularComponentsRoutingModule {
 }
