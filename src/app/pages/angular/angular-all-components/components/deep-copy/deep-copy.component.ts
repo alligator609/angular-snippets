@@ -20,6 +20,8 @@ export class DeepCopyComponent implements OnInit {
   constructor() { }
   
   autocompleteHTML =
+  ` `;
+  autocompleteJS =
   `  JSON.parse(JSON.stringify(transfer))`;
 
 ngOnInit() {

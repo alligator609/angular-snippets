@@ -19,10 +19,8 @@ export class CopyToClipboardComponent implements OnInit {
   states: CountryState;
   constructor() { }
   
-  autocompleteHTML =
-  `  <h6 (click)="copyToClipboard(lead.id)" [title]="click to copy">Copy to clip board </h6>
-
-  copyToClipboard(val: string) {
+  autocompleteJS =
+  `  copyToClipboard(val: string) {
     let selBox = document.createElement("textarea");
     selBox.style.position = "fixed";
     selBox.style.left = "0";
@@ -34,8 +32,9 @@ export class CopyToClipboardComponent implements OnInit {
     selBox.select();
     document.execCommand("copy");
     document.body.removeChild(selBox);
-  }
-`;
+  }`;
+  autocompleteHTML =
+  `  <h6 (click)="copyToClipboard(lead.id)" [title]="click to copy">Copy to clip board </h6>`;
 
 ngOnInit() {
 }

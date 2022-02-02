@@ -8,11 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class TempleteDrivenValidationComponent implements OnInit {
 
   constructor() { }
+
+
   autocompleteHTML =
   `  <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm">
   <mat-form-field fxFlex="auto" appearance="outline">
       <mat-label>Customer Name</mat-label>
-      <input matInput type="text" name="firstName" class="form-control" [(ngModel)]="model.firstName" #firstName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && firstName.invalid }" required>
+      <input matInput type="text" name="firstName" class="form-control" [(ngModel)]="model.firstName" #firstName="ngModel" 
+      [ngClass]="{ 'is-invalid': f.submitted && firstName.invalid }" required>
       <div *ngIf="f.submitted && firstName.invalid" class="invalid-feedback">
           <div *ngIf="firstName.errors.required">First Name is required</div>
       </div>
@@ -23,13 +26,16 @@ export class TempleteDrivenValidationComponent implements OnInit {
   </div>
 </form>
 
+
+`;
+
+autocompleteJS = `
 model: any = {};
 
 onSubmit() {
   alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.model, null, 4));
-}
+}`;
 
-`;
   ngOnInit() {
   }
   model: any = {};
