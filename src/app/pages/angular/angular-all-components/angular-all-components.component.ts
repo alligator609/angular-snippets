@@ -4,6 +4,7 @@ import { fadeInRight400ms } from 'src/@vex/animations/fade-in-right.animation';
 import { fadeInUp400ms } from 'src/@vex/animations/fade-in-up.animation';
 import { stagger80ms } from 'src/@vex/animations/stagger.animation';
 import { CopyToClipboardComponent } from './components/copy-to-clipboard/copy-to-clipboard.component';
+import { DeepCopyComponent } from './components/deep-copy/deep-copy.component';
 import { TempleteDrivenValidationComponent } from './components/templete-driven-validation/templete-driven-validation.component';
 
 @Component({
@@ -21,6 +22,8 @@ export class AngularAllComponentsComponent implements OnInit {
 
   @ViewChild(CopyToClipboardComponent, { read: ElementRef, static: true }) private clipboard: ElementRef;
   @ViewChild(TempleteDrivenValidationComponent, { read: ElementRef, static: true }) private templetedriven: ElementRef;
+  @ViewChild(  DeepCopyComponent, { read: ElementRef, static: true }) private deepcopy: ElementRef;
+
 
   
   constructor(

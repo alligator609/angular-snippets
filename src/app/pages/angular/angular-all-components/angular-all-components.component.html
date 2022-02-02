@@ -16,12 +16,17 @@
                 <mat-list-item (click)="scrollTo('templetedriven')" @fadeInRight class="cursor-pointer" matRipple>
                     <h4 matLine>Templete Driven</h4>
                 </mat-list-item>
+                <mat-list-item (click)="scrollTo('deepcopy')" @fadeInRight class="cursor-pointer" matRipple>
+                    <h4 matLine>Deepcopy</h4>
+                </mat-list-item>
             </mat-list>
         </div>
 
         <div @stagger class="w-full" fxLayout="column" fxLayoutGap="24px">
             <vex-copy-to-clipboard @fadeInUp></vex-copy-to-clipboard>
             <app-templete-driven-validation @fadeInUp></app-templete-driven-validation>
+            <vex-deep-copy @fadeInUp></vex-deep-copy>
+
         </div>
     </vex-page-layout-content>
 </vex-page-layout>

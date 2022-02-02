@@ -21,6 +21,7 @@ import { VexRoutes } from 'src/@vex/interfaces/vex-route.interface';
 import { ComponentsOverviewAutocompleteModule } from '../ui/components/components-overview/components/components-overview-autocomplete/components-overview-autocomplete.module';
 import { AngularAllComponentsComponent } from './angular-all-components/angular-all-components.component';
 import { CopyToClipboardComponent } from './angular-all-components/components/copy-to-clipboard/copy-to-clipboard.component';
+import { DeepCopyComponent } from './angular-all-components/components/deep-copy/deep-copy.component';
 import { TempleteDrivenValidationComponent } from './angular-all-components/components/templete-driven-validation/templete-driven-validation.component';
 
 
@@ -53,7 +54,11 @@ const routes: VexRoutes = [
     BreadcrumbsModule,
     ContainerModule],
   exports: [RouterModule],
-  declarations:[CopyToClipboardComponent,AngularAllComponentsComponent,TempleteDrivenValidationComponent]
+  declarations:[CopyToClipboardComponent,
+    AngularAllComponentsComponent,
+    TempleteDrivenValidationComponent,
+    DeepCopyComponent
+  ]
 })
 export class AngularComponentsRoutingModule {
 }
